@@ -5,7 +5,7 @@ import { useFrame, useThree } from "@react-three/fiber";
 import islandScene from "../assets/3d/island.glb";
 import { a } from "@react-spring/three";
 
-const Island = ({ isRotate, setIsRotate, setCurrentStage, ...props }) => {
+const Island = ({ isRotate, setIsRotate, setCurrentStage,setShowHint, ...props }) => {
   const islandRef = useRef();
   const { gl, viewport } = useThree(); // to get the size of the viewport
   const { nodes, materials } = useGLTF(islandScene);
@@ -19,6 +19,7 @@ const Island = ({ isRotate, setIsRotate, setCurrentStage, ...props }) => {
     setIsRotate(true);
     const clientX = e.touches ? e.touches[0].clientX : e.clientX; // to get the clientX of the mouse
     lastX.current = clientX; // to store the clientX in the ref
+    setShowHint(false);// to hide the hint
   };
   const handlePointerUp = (e) => {
     e.stopPropagation();
@@ -52,6 +53,7 @@ const Island = ({ isRotate, setIsRotate, setCurrentStage, ...props }) => {
       islandRef.current.rotation.y -= 0.1 * Math.PI;
       rotationSpeed.current = -0.0125;
     }
+    setShowHint(false);// to hide the hint
   };
 
   const handleKeyUp = (e) => {
