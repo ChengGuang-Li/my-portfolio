@@ -68,7 +68,7 @@ const Contact = () => {
   const handleBlur = (e) => setCurrentAnimation("Dance");
 
   return (
-    <section className="relative flex lg:flex-row flex-col max-container">
+    <section className="relative flex lg:flex-row flex-col max-container h-[100vh]">
       {alert.show && <Alert {...alert} />}
 
       <div className="flex-1 min-w-[50%] flex flex-col">
@@ -149,7 +149,7 @@ const Contact = () => {
           <Suspense fallback={<Loader />}>
             <Pikachu
               currentAnimation={currentAnimation}
-              position={[1, -2, 0]}
+              position={[1, -1, 0]}
               scale={[2, 2, 2]}
               rotation={[Math.PI / 90, Math.PI / -10, 0]}
             />

@@ -5,12 +5,7 @@ import { useFrame, useThree } from "@react-three/fiber";
 import islandScene from "../assets/3d/island.glb";
 import { a } from "@react-spring/three";
 
-const Island = ({
-  isRotate,
-  setIsRotate,
-  setCurrentStage,
-  ...props
-}) => {
+const Island = ({ isRotate, setIsRotate, setCurrentStage, ...props }) => {
   const islandRef = useRef();
   const { gl, viewport } = useThree(); // to get the size of the viewport
   const { nodes, materials } = useGLTF(islandScene);
@@ -49,22 +44,24 @@ const Island = ({
         setIsRotate(true);
       }
       islandRef.current.rotation.y += 0.1 * Math.PI;
+      rotationSpeed.current = 0.0125;
     } else if (e.key == "ArrowRight") {
       if (!isRotate) {
         setIsRotate(true);
       }
       islandRef.current.rotation.y -= 0.1 * Math.PI;
+      rotationSpeed.current = -0.0125;
     }
   };
 
   const handleKeyUp = (e) => {
-    if ((e.key == "ArrowLeft" || e.key == "ArrowRight")) {
+    if (e.key == "ArrowLeft" || e.key == "ArrowRight") {
       setIsRotate(false);
     }
   };
 
   useEffect(() => {
-    const canvas = gl.domElement;// to get the canvas element
+    const canvas = gl.domElement; // to get the canvas element
     canvas.addEventListener("pointerdown", handlePointerDown);
     canvas.addEventListener("pointerup", handlePointerUp);
     canvas.addEventListener("pointermove", handlePointerMove);
@@ -85,9 +82,8 @@ const Island = ({
       if (Math.abs(rotationSpeed.current) < 0.001) {
         rotationSpeed.current = 0; // to stop the rotation if the speed is less than 0.001
       }
-      //slow the speed 
+      //slow the speed
       islandRef.current.rotation.y += rotationSpeed.current; // to rotate the island
-      
     } else {
       const rotation = islandRef.current.rotation.y; // to calculate the rotation
       /**
