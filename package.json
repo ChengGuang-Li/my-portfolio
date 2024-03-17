@@ -14,10 +14,12 @@
     "@react-spring/three": "^9.7.3",
     "@react-three/drei": "^9.102.3",
     "@react-three/fiber": "^8.15.19",
+    "grapheme-splitter": "^1.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
-    "react-vertical-timeline-component": "^3.6.0"
+    "react-vertical-timeline-component": "^3.6.0",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.64",
