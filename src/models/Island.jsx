@@ -11,7 +11,7 @@ const Island = ({ isRotate, setIsRotate, setCurrentStage,setShowHint, ...props }
   const { nodes, materials } = useGLTF(islandScene);
   const lastX = useRef(0); // to store the last position of the mouse
   const rotationSpeed = useRef(0); // to control the speed of the rotation
-  const dampingFactor = 0.95; // to control the damping of the rotation
+  const dampingFactor = 0.7; // to control the damping of the rotation
 
   const handlePointerDown = (e) => {
     e.stopPropagation();
