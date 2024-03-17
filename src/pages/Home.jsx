@@ -9,7 +9,7 @@ import HomeInfo from "../components/HomeInfo";
 import soundon from "../assets/icons/soundon.png";
 import soundoff from "../assets/icons/soundoff.png";
 
-import audio from "../assets/sakura.mp3";
+import audio from "../assets/sound.mp3";
 import drag from "../assets/icons/drag.png";
 
 const Home = () => {
@@ -18,7 +18,7 @@ const Home = () => {
   const [showHint, setShowHint] = useState(true);
   //audio
   const audioRef = useRef(new Audio(audio));
-  audioRef.current.volume = 0.3;
+  audioRef.current.volume = 1;
   audioRef.current.loop = true;
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
 
