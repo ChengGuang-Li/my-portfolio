@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import Loader from "../components/Loader";
 import Island from "../models/Island";
 import Sky from "../models/Sky";
-import Phoenix from "../models/Phoenix";
+import Rayquaza from "../models/Rayquaza";
 import Latios from "../models/Latios";
 import HomeInfo from "../components/HomeInfo";
 import soundon from "../assets/icons/soundon.png";
@@ -81,7 +81,7 @@ const Home = () => {
             groundColor="#000000"
             intensity={1}
           />
-          <Phoenix />
+          <Rayquaza />
           <Sky isRotate={isRotate} />
           <Island
             position={islandPosition}
