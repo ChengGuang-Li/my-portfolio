@@ -238,7 +238,7 @@ export const projects = [
     name: "Portfolio",
     description:
       "This cool 3D personal homepage is built with incredible interactive design principles and utilizes the powerful Three.js and React Fiber 3D technologies.",
-    link: "https://www.chengguangweb.com/",
+    link: "https://github.com/ChengGuang-Li/my-portfolio",
   },
   {
     iconUrl: e2e,

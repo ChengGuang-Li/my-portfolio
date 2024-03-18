@@ -17,7 +17,7 @@ const renderContent = {
     <h1 className="sm:text-xl sm:leading-snug text-center  py-4 px-8 text-black mx-5 bounce">
       Hi, I am <span className="font-semibold">Vincent </span> <span className="wave" role="img" aria-labelledby="wave"> 👋 </span> 
       <br />
-      A Software Engineer from China 🇨🇳
+      A Software Engineer from 🇨🇳
     </h1>
   ),
   2: <InfoBox text="Work Experience" link="/about" btnText={"Learn More"} />,
