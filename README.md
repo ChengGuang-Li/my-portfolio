@@ -2,7 +2,7 @@
 
 <img width="200%" src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/hr.gif" />
 
-<img src="https://skillicons.dev/icons?i=js,react,threejs,tailwindcss,vite&theme=light"/>
+<div align="center"><img src="https://skillicons.dev/icons?i=js,react,threejs,tailwindcss,vite&theme=light"/></div>
 
 ### Effect Preview
 
