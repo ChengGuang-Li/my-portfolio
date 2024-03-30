@@ -35,10 +35,10 @@ const Home = () => {
 		let screenScale = null;
 		let screenPosition = [0, -6.5, -43];
 		let rotation = [0.1, 4.7, 0];
-		if (window.innerWidth < 400) {
+		if (window.innerWidth < 431) {
 			screenScale = [0.48, 0.48, 0.48];
 			screenPosition = [2, -6.5, -43];
-		} else if (window.innerWidth > 400 && window.innerWidth < 768) {
+		} else if (window.innerWidth > 431 && window.innerWidth < 768) {
 			screenScale = [0.9, 0.9, 0.9];
 		} else {
 			screenScale = [1, 1, 1];
@@ -48,10 +48,10 @@ const Home = () => {
 
 	const adjuestLatiosForScreenSize = () => {
 		let screenScale, screenPosition;
-		if (window.innerWidth < 400) {
+		if (window.innerWidth < 431) {
 			screenScale = [0.2, 0.2, 0.2];
 			screenPosition = [0.3, -1.5, -0.6];
-		} else if (window.innerWidth > 400 && window.innerWidth < 768) {
+		} else if (window.innerWidth > 431 && window.innerWidth < 768) {
 			screenScale = [0.3, 0.3, 0.3];
 			screenPosition = [0, -2.1, -0.6];
 		} else {
@@ -62,7 +62,7 @@ const Home = () => {
 	};
 
 	const adjustHomeInfo = () => {
-		if (window.innerWidth < 400) {
+		if (window.innerWidth < 431) {
 			return "top-40";
 		} else {
 			return "top-24";
